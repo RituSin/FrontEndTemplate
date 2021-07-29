@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wave</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+   
+    <body >
+        <div class="container">
+            <button id="btn" class="pulse">Click</button>
+        </div>
+        
+        <script>
+            var btn = document.getElementById('btn');
+            btn.onclick = function() {
+                btn.focus();
+                window.setTimeout(function() {
+                    btn.blur();        
+                },3100);
+            };
+        </script>
+
+       
+    </body>
+</html>

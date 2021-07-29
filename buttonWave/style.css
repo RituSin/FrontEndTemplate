@@ -1,0 +1,96 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.container{   
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pulse
+{
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+ 
+.pulse 
+{
+    background-color: white;
+    position: relative;
+    border-radius: 12px;
+    color: black;
+    font-weight: 800;
+    width: 100px;
+    height: 40px;
+   
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  
+}
+
+button:focus 
+{
+    background-color:blue; 
+    color: white;
+}
+
+
+.pulse:focus::before
+{
+    content: "";
+    position: absolute;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    border: 1px solid blue;
+    border-radius: 12px;
+   
+    animation: pulseEffect 1.5s linear infinite;
+}
+
+.pulse:focus::after
+{
+    content: "";
+    position: absolute;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    border: 1px solid blue;
+    border-radius: 12px;
+    animation: pulseEffect 1.5s linear infinite;
+    opacity: 0;
+    animation-delay: 0.4s;
+}
+
+@keyframes pulseEffect 
+{
+    0%
+    {
+        transform: scale(0.5);
+        opacity: 0;
+        border-radius: 12px;
+    }
+    50%
+    {
+        transform: scale(1);
+        opacity: 1;
+        border-radius: 14px;
+    }
+    100%
+    {
+        transform: scale(1.5);
+        opacity: 0;
+        border-radius: 12px;
+    }
+}
